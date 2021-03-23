@@ -11,10 +11,10 @@ const IndexScreen=({navigation})=>{
     useEffect(()=>{
       getBlogPosts();
    
-      navigation.addListener('didFocus',()=>{    // jab bhi ham IndexScreen pe aayenge then latest array firse fetch hoga.
+      navigation.addListener('didFocus',()=>{    
         getBlogPosts();
     });
-    return ()=>{  // jab IndexScreen pe nhi honge then close the listener.
+    return ()=>{  
     listener.remove();
 }
 }, [])

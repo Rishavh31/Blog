@@ -6,7 +6,6 @@ import { MaterialIcons } from '@expo/vector-icons';
 const ShowScreen=({navigation})=>{
     const id=navigation.getParam('id');
     const {state}=useContext(Context);
-     // is screen me mujhe sirf state chahiye thi isliye sirf use hi destructure kiya hai
     const blogPost=state.find((blogpost)=>blogpost.id===id);
     return (
         <View>
